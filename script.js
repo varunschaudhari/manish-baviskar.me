@@ -1,4 +1,20 @@
 // ============================================
+// Scroll Progress Indicator
+// ============================================
+const scrollProgress = document.createElement('div');
+scrollProgress.className = 'scroll-progress';
+document.body.appendChild(scrollProgress);
+
+function updateScrollProgress() {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    scrollProgress.style.width = scrolled + '%';
+}
+
+window.addEventListener('scroll', updateScrollProgress);
+updateScrollProgress();
+
+// ============================================
 // Dark Mode Toggle
 // ============================================
 const darkModeToggle = document.getElementById('darkModeToggle');
