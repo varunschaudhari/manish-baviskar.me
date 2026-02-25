@@ -1,0 +1,32 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "serve -l 8080",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "htmlhint index.html",
+    "lint:css": "stylelint style.css",
+    "lint:js": "eslint script.js",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varunschaudhari/manish-baviskar.me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varunschaudhari/manish-baviskar.me/issues"
+  },
+  "homepage": "https://github.com/varunschaudhari/manish-baviskar.me#readme",
+  "devDependencies": {
+    "eslint": "^10.0.2",
+    "htmlhint": "^1.9.1",
+    "serve": "^14.2.5",
+    "stylelint": "^17.3.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
