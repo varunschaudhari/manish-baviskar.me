@@ -237,6 +237,31 @@ tabButtons.forEach(button => {
 });
 
 // ============================================
+// Visiting Card QR Code
+// ============================================
+const vcardQr = document.getElementById('vcardQr');
+const vcardQrUrl = document.getElementById('vcardQrUrl');
+const vcardQrBlock = document.getElementById('vcardQrBlock');
+
+if (vcardQr && typeof qrcode === 'function') {
+    const siteUrl = 'https://manish-baviskar.com/';
+    const qr = qrcode(0, 'M');
+    qr.addData(siteUrl);
+    qr.make();
+
+    vcardQr.innerHTML = qr.createSvgTag({
+        cellSize: 4,
+        margin: 16,
+        scalable: true,
+        title: 'QR code for ' + siteUrl
+    });
+    vcardQrUrl.textContent = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+} else if (vcardQrBlock) {
+    // QR library failed to load - hide the empty QR box
+    vcardQrBlock.style.display = 'none';
+}
+
+// ============================================
 // Contact Form Validation and Submission
 // ============================================
 const contactForm = document.getElementById('contactForm');

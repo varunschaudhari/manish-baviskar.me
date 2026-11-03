@@ -980,6 +980,47 @@
         </div>
     </section>
 
+    <!-- Visiting Card Section -->
+    <section id="visiting-card" class="visiting-card section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Visiting Card</h2>
+            <div class="vcard" data-aos="fade-up">
+                <div class="vcard-details">
+                    <div class="vcard-header">
+                        <img src="manish-profile-photo.jpeg" alt="Manish Baviskar" class="vcard-photo">
+                        <div>
+                            <h3 class="vcard-name">Manish Baviskar</h3>
+                            <p class="vcard-title">Pharmaceutical Validation Engineer</p>
+                        </div>
+                    </div>
+                    <ul class="vcard-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:4094337961">409-433-7961</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:manishdbaviskar@gmail.com">manishdbaviskar@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>South Bend, IN 46628</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/manish-baviskar-ms-8851222a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vcard-qr" id="vcardQrBlock">
+                    <div class="vcard-qr-code" id="vcardQr"></div>
+                    <p class="vcard-qr-caption">Scan to visit my website</p>
+                    <span class="vcard-qr-url" id="vcardQrUrl"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
@@ -1048,6 +1089,7 @@
                     <a href="#experience">Experience</a>
                     <a href="#education">Education</a>
                     <a href="#skills">Skills</a>
+                    <a href="#visiting-card">Visiting Card</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-copyright">
@@ -1059,7 +1101,10 @@
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
+    <!-- QR Code Generator (Visiting Card) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" integrity="sha384-mZT2gIty7ZDdOGkxfP6joZcYdMW1Jvj9dRlfpTmaJAKKXTqzygtB22k7FLe+KZC1" crossorigin="anonymous"></script>
+
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
