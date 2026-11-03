@@ -1468,6 +1468,33 @@ a:hover {
     overflow-wrap: anywhere;
 }
 
+.vcard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.vcard-actions .btn {
+    font-family: inherit;
+}
+
+/* Same 2px border as .btn-secondary so all buttons are the same height */
+.vcard-actions .btn-primary {
+    border: 2px solid var(--primary-color);
+}
+
+.vcard-actions .btn-primary:hover {
+    border-color: var(--primary-dark);
+}
+
+.vcard-actions .btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+}
+
 /* ============================================
    Footer
    ============================================ */
@@ -1692,6 +1719,15 @@ a:hover {
     }
 
     .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .vcard-actions {
+        flex-direction: column;
+    }
+
+    .vcard-actions .btn {
         width: 100%;
         justify-content: center;
     }
